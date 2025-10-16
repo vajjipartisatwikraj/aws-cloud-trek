@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Workshop by Aviz Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <img src="logo.png" alt="Aviz Academy Logo" class="logo">
+                <h1>AWS Workshop by Aviz Academy</h1>
+            </div>
+            <div class="aws-services">
+                <span class="service-badge"><i class="fab fa-aws"></i> S3</span>
+                <span class="service-badge"><i class="fas fa-server"></i> EC2</span>
+                <span class="service-badge"><i class="fas fa-database"></i> RDS</span>
+                <span class="service-badge"><i class="fas fa-shield-alt"></i> IAM</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="form-section">
+                <h2><i class="fas fa-plus-circle"></i> Add Student Information</h2>
+                <form id="studentForm" class="student-form">
+                    <div class="form-group">
+                        <label for="name"><i class="fas fa-user"></i> Student Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="course"><i class="fas fa-graduation-cap"></i> Course</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select Course</option>
+                            <option value="AWS Solutions Architect">AWS Solutions Architect</option>
+                            <option value="AWS Developer">AWS Developer</option>
+                            <option value="AWS SysOps">AWS SysOps</option>
+                            <option value="AWS DevOps">AWS DevOps</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-save"></i> Add Student
+                    </button>
+                </form>
+            </div>
+
+            <div class="data-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Registered Students</h2>
+                    <button id="refreshBtn" class="btn-refresh">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+                <div id="studentsTable" class="table-container">
+                    <!-- Students data will be loaded here -->
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Aviz Academy - AWS Workshop Demo | Powered by EC2, RDS, S3 & IAM</p>
+        </footer>
+    </div>
+
+    <div id="notification" class="notification"></div>
+    <script src="script.js"></script>
+</body>
+</html>
